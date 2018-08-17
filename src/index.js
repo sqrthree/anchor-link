@@ -4,5 +4,13 @@
  * @return {string}       anchor link
  */
 module.exports = input => {
-  return input.replace(/\s+/g, '-').toLowerCase()
+  return input
+    .trim()
+    .toLowerCase()
+    .replace(/[`~!@#$%^&*()+=<>?,./:;"'|{}\[\]\\]/g, '')
+    .replace(
+      /[　。？！，、；：“”【】（）〔〕［］﹃﹄“”‘’﹁﹂—…－～《》〈〉「」]/g,
+      ''
+    )
+    .replace(/\s+/g, '-')
 }
