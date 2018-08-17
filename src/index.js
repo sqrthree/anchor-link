@@ -4,6 +4,8 @@
  * @return {string}       anchor link
  */
 module.exports = input => {
+  if (typeof input !== 'string') throw new Error('Expecting to receive a string but got a ' + typeof input)
+
   return input
     .trim()
     .toLowerCase()
