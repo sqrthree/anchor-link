@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack --run-dev --log-time --watch --cache --output-filename anchor.js --output-library anchor --output-library-target umd",
     "build": "webpack --run-prod --progress --output-filename anchor.js --output-library anchor --output-library-target umd",
-    "deploy": "cp dist/anchor.js test/anchor.js && sed -i '' 's/\\.\\.\\/dist/./' test/index.html && gh-pages -d test",
+    "deploy": "cp dist/anchor.js test/anchor.js && sed -i '' 's/\\.\\.\\/dist/./' test/index.html && gh-pages -d test && git checkout test && git clean -f",
     "test": "serve"
   },
   "repository": {
