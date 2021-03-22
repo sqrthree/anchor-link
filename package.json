@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack --run-dev --log-time --watch --cache --output-filename anchor.js --output-library anchor --output-library-target umd",
     "build": "webpack --run-prod --progress --output-filename anchor.js --output-library anchor --output-library-target umd",
-    "deploy": "cp dist/anchor.js test/anchor.js && sed -i '' 's/\\.\\.\\/dist/./' test/index.html && gh-pages -d test && git checkout test && git clean -f",
+    "deploy": "cp dist/anchor.js test/anchor.js && sed -i '' 's/\\.\\.\\/dist/./' test/index.html && gh-pages -d test",
     "test": "serve"
   },
   "repository": {
@@ -24,7 +24,7 @@
   "homepage": "https://github.com/sqrthree/anchor-link#readme",
   "devDependencies": {
     "gh-pages": "^1.2.0",
-    "serve": "^10.1.2",
+    "serve": "^11.3.2",
     "webpack": "^4.16.3",
     "webpack-command": "^0.4.1"
   }
